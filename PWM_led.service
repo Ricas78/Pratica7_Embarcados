@@ -1,0 +1,14 @@
+[Unit]
+#seção responsável pelas informações do serviço e descrição de suas dependências
+Description= PWM LED #Descrição do serviço
+After=multi-user.target #usuários alvos
+
+[Service]
+#configurações da execução do serviço que será inicializado
+ExecStart=/usr/bin/python3 #caminho do arquivo que será execuado na inicialização
+ExecStart=/home/sel/PWM_led.py #caminho do arquivo que será execuado na inicialização
+user=SEL
+
+[Install]
+#Seção que descreve o comportamento da inicialização do serviço
+WantedBy=multi-user.target #Informar o systemd o grupo alvo no qual o serviço que deverá ser inicializado faz parte
