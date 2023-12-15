@@ -1,0 +1,21 @@
+Histórico do arquivo python adicionado como serviço na inicialização:
+
+  1  nano PWM_led.py
+  2  chmod +x ./PWM_led.py
+  3  python3 PWM_led.py
+  4  nano PWM_led.service
+  5  sudo cp PWM_led.service /lib/systemd/system/
+  6  sudo systemctl start PWM_led.service
+  7  sudo systemctl stop PWM_led.service
+  8  sudo systemctl enable PWM_led.service
+
+Histórico do arquivo bash adicionado como serviço na inicialização como exemplo na aula:
+
+  1  nano pisca.sh
+  2  chmod +x ./pisca.sh
+  3  ./pisca.sh
+  4  nano pisca.service
+  5  sudo cp pisca.service /lib/systemd/system/
+  6  sudo systemctl start pisca.service
+  7  sudo systemctl stop pisca.service
+  8  sudo systemctl enable pisca.service
