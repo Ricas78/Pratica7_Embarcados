@@ -1,12 +1,11 @@
 [Unit]
 #seção responsável pelas informações do serviço e descrição de suas dependências
-Description= PWM LED #Descrição do serviço
+Description=PWM LED #Descrição do serviço
 After=multi-user.target #usuários alvos
 
 [Service]
 #configurações da execução do serviço que será inicializado
-ExecStart=/usr/bin/python3 #caminho do arquivo que será execuado na inicialização
-ExecStart=/home/sel/PWM_led.py #caminho do arquivo que será execuado na inicialização
+ExecStart=/usr/bin/python3 "/home/sel/PWM_led.py" #caminho do arquivo que será execuado na inicialização
 user=SEL
 
 [Install]
